@@ -1,0 +1,10 @@
+# Ścieżka względna względem folderu configs, dzięki czemu projekt działa
+# również po sklonowaniu na innym komputerze.
+path: ../datasets
+
+train: train/images
+val: val/images
+test: test/images
+
+names:
+  0: ship

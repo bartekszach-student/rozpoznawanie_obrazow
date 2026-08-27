@@ -1,0 +1,42 @@
+# Zbiory danych i ręcznie zebrane obrazy
+datasets/
+test_images/
+
+# Wyniki treningów, ewaluacji i automatycznego etykietowania
+runs/
+second_model_review/
+second_model_review_conf035/
+backups/
+Ultralytics/
+
+# Wagi oraz wyeksportowane modele (często przekraczają limit GitHub 100 MB)
+*.pt
+*.pth
+*.onnx
+*.engine
+*.torchscript
+*.tflite
+*.pb
+*.mlmodel
+*.weights
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Środowiska wirtualne i pliki lokalne
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# System i edytory
+.DS_Store
+Thumbs.db
+*.code-workspace
+
