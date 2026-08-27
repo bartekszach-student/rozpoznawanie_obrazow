@@ -14,7 +14,6 @@ Instalacja zależności w terminalu Anaconda Prompt:
 
 ```bat
 conda activate ships
-cd C:\Users\barti\Desktop\ship-detection
 pip install -r requirements.txt
 ```
 
