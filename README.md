@@ -85,6 +85,10 @@ Przykładowe użycie opublikowanych wag:
 ```bat
 python scripts/evaluate.py --model artifacts/yolo11s_hybrid/weights/best.pt --split test
 ```
+Uruchomienie sieci z kamery
+```bat
+yolo predict model="ścieżka\do\best.pt" source=0 imgsz=960 conf=0.34 device=0 show=True
+```
 
 ## Jetson Xavier i ROS
 
