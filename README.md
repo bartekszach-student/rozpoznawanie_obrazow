@@ -12,7 +12,7 @@ kontroli datasetu, treningu i ewaluacji modelu.
 
 Instalacja zależności w terminalu Anaconda Prompt:
 
-```powershell
+```bat
 conda activate ships
 cd C:\Users\barti\Desktop\ship-detection
 pip install -r requirements.txt
@@ -41,7 +41,7 @@ Pusty plik etykiety oznacza obraz bez statku. Ścieżkę datasetu ustawia się w
 
 ## Kontrola danych
 
-```powershell
+```bat
 python scripts/train.py --check-only
 ```
 
@@ -49,7 +49,7 @@ python scripts/train.py --check-only
 
 Przykład treningu YOLO11n przez maksymalnie 80 epok:
 
-```powershell
+```bat
 python scripts/train.py --model yolo11n.pt --epochs 80 --imgsz 960 --batch -1
 ```
 
@@ -61,16 +61,34 @@ artefaktami eksperymentów.
 
 Podaj rzeczywistą ścieżkę do najlepszego checkpointu:
 
-```powershell
+```bat
 python scripts/evaluate.py --model runs/detect/yolo11n_ships/weights/best.pt --split test
 ```
 
 Skrypt wypisuje Precision, Recall, F1, mAP@50 i mAP@50-95 oraz zapisuje
 wykresy ewaluacji w katalogu `runs/evaluation/`.
 
+## Najlepszy zapisany model
+
+Wybrany checkpoint `yolo11s_hybrid` oraz komplet wykresów i wyników znajduje
+się w katalogu [`artifacts/yolo11s_hybrid`](artifacts/yolo11s_hybrid).
+
+Wyniki na zbiorze testowym:
+
+- Precision: 70,00%
+- Recall: 65,59%
+- F1: 67,72%
+- mAP@50: 72,17%
+- mAP@50-95: 49,35%
+
+Przykładowe użycie opublikowanych wag:
+
+```bat
+python scripts/evaluate.py --model artifacts/yolo11s_hybrid/weights/best.pt --split test
+```
+
 ## Jetson Xavier i ROS
 
 Eksport oraz integracja z kamerą/ROS są kolejnym etapem projektu. Na Jetsonie
 PyTorch i TensorRT muszą być zgodne z zainstalowaną wersją JetPack; dlatego
 środowisko Jetsona należy przygotować osobno od środowiska Windows.
-

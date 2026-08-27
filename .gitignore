@@ -20,6 +20,9 @@ Ultralytics/
 *.mlmodel
 *.weights
 
+# Wybrany najlepszy checkpoint publikowany razem z wynikami eksperymentu
+!artifacts/**/best.pt
+
 # Python
 __pycache__/
 *.py[cod]
@@ -39,4 +42,3 @@ env/
 .DS_Store
 Thumbs.db
 *.code-workspace
-
